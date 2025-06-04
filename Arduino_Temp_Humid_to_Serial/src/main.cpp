@@ -1,18 +1,34 @@
 #include <Arduino.h>
 
-// put function declarations here:
-int myFunction(int, int);
+#include <Wire.h>
+#include <SHTSensor.h>
 
-void setup() {
-  // put your setup code here, to run once:
-  int result = myFunction(2, 3);
+SHTSensor sht;
+
+void setup()
+{
+  Serial.begin(9600);
+  Wire.begin();
+
+  if (!sht.init())
+  {
+    Serial.println("SHT Init failed!");
+    while (1)
+      ;
+  }
 }
 
-void loop() {
-  // put your main code here, to run repeatedly:
-}
+void loop()
+{
+  if (sht.readSample())
+  {
+    float temp = sht.getTemperature();
+    float hum = sht.getHumidity();
 
-// put function definitions here:
-int myFunction(int x, int y) {
-  return x + y;
+    // فرمت ارسال: 27.38,35.24
+    Serial.print(temp);
+    Serial.print(",");
+    Serial.println(hum);
+  }
+  delay(2000);
 }
