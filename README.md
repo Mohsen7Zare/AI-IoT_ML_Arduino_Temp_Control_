@@ -42,9 +42,13 @@ Sending data to a computer (via USB cable) and drawing graphs in Python, creatin
 ![alt text](SHT20-Sensor-Communication-Pin.jpg)
 
 SHT20 ---- Arduino
+
  VCC    →     5V
+
  GND    →     GND
+
  SDA    →     A4
+ 
  SCL    →     A5
 
 |  SHT20  | Arduino 
