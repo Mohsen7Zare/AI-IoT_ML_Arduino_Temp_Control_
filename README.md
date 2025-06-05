@@ -41,22 +41,13 @@ Sending data to a computer (via USB cable) and drawing graphs in Python, creatin
 ![alt text](SHT20-to-Arduino-I2C-wire.jpg)
 ![alt text](SHT20-Sensor-Communication-Pin.jpg)
 
-SHT20 ---- Arduino
-
- VCC    →     5V
-
- GND    →     GND
-
- SDA    →     A4
- 
- SCL    →     A5
 
 |  SHT20  | Arduino 
 |   ----  |  ----  |
-|  VCC    |  5V    |
-|  GND    |  GND   |
-|  SDA    |  A4    |
-|  SCL    |  A5    |
+|  VCC  → |  5V    |
+|  GND  → |  GND   |
+|  SDA  → |  A4    |
+|  SCL  → |  A5    |
 
 **Installing the library:**
 - SHTSensor
@@ -76,12 +67,11 @@ We want to connect Python to Arduino via USB port and display and save data comi
 - Display online in console
 
 ### **🧱 Step 1: Arduino code (simplified) for measuring temperature and humidity using a sensor SHT20**
-The code for this step is located in the path: *→ Sending_Arduino_Temp_Humid_to_Serial → src → main.cpp* .
+The code for this step is located in the path:  *→ Sending_Arduino_Temp_Humid_to_Serial → src → main.cpp* .
 
 ### **🐍 Step 2: Python code to receive and store data sent from Arduino**
 #### **📦 First install the library:**
-In the VS Code terminal, type:
-
+In the VS Code terminal, type:  
 pip install pyserial pandas
 
 #### **💾 Then run this Python script in  file: ** 
@@ -91,10 +81,9 @@ pip install pyserial pandas
 - Data is displayed instantly
 - Pressing Ctrl + C stops the download and creates a CSV file
 
-We now have a CSV file containing:
-
-Timestamp, Temperature, Humidity
-2025-06-03 22:01:00, 30.17, 31.64
+We now have a CSV file containing:    
+Timestamp, Temperature, Humidity  
+2025-06-03 22:01:00, 30.17, 31.64  
 ...
 
 ## **✅ Project Pase 2: Plotting temperature and humidity graphs with Python**
@@ -104,7 +93,7 @@ Timestamp, Temperature, Humidity
 ### **🐍 Python code for plotting the graph**
 The code for this section is in a *file called plot_sensor_data.py*
 ### **📦 Install matplotlib:**
-Type this code in the terminal:
+Type this code in the terminal:  
 pip install matplotlib
 
 ### **🔍 Result:**
@@ -143,16 +132,15 @@ This code was placed in the file *Labeling_sensor_DataCSV.py* and the result was
 
 ### **✅ Step 2: Creat a model with Scikit-learn and training it**
 #### **📦 Install the library package:**
-Type this code in the terminal:
-
+Type this code in the terminal:  
 pip install scikit-learn
 
 #### **📊 Using the Decision Tree model:**
-The machine learning model code is placed in the file:
+The machine learning model code is placed in the file:  
 *ML_Model_Decision_Making.py* .
 
 #### **Saving the trained model:**
-The model is saved by the joblib library in the file:
+The model is saved by the joblib library in the file:  
 *prediction_model.pkl*
 
 ## **✅ Project Pase 4: Make a decision in the moment with Python and send a command to Arduino**
@@ -163,11 +151,12 @@ The model is saved by the joblib library in the file:
 - Arduino controls the output (such as an LED or a fan) based on the command
 
 ### **🧱 Step 1: Arduino code (receiving commands from Python)**
-If we assume the fan output is on pin 7 of the Arduino:
-This code is placed in the path : *→ Receiving_Arduino_commands_from_Python → src → main.cpp*.
+If we assume the fan output is on pin 7 of the Arduino  
+This code is placed in the path :  
+*→ Receiving_Arduino_commands_from_Python → src → main.cpp*.
 
 ### **🐍 Step 2: Python code to predict and send commands to Arduino**
-This code is placed in the file:
+This code is placed in the file:  
 *Predicting_and_sending_commands_to_Arduino.py*
 
 ### **🔌 Project test:**
