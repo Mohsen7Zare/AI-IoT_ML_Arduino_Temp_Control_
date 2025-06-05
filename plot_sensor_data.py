@@ -1,22 +1,22 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-# خواندن فایل CSV
+# Reading CSV file
 df = pd.read_csv('sensor_data.csv')
 
-# تبدیل ستون زمان به نوع datetime
+# Convert time column to datetime type
 df['Timestamp'] = pd.to_datetime(df['Timestamp'])
 
-# تنظیم اندازه نمودار
+# Adjust plot size
 plt.figure(figsize=(12, 6))
 
-# رسم دما
+# Drawing a temperature graph
 plt.plot(df['Timestamp'], df['Temperature'], label='Temperature (°C)', color='red', marker='o')
 
-# رسم رطوبت
+# Drawing a humidity plot
 plt.plot(df['Timestamp'], df['Humidity'], label='Humidity (%)', color='blue', marker='x')
 
-# تنظیمات نمودار
+# plot settings
 plt.title('Temperature and Humidity Over Time')
 plt.xlabel('Time')
 plt.ylabel('Value')
@@ -25,5 +25,5 @@ plt.grid(True)
 plt.legend()
 plt.tight_layout()
 
-# نمایش نمودار
+# Show plot
 plt.show()
