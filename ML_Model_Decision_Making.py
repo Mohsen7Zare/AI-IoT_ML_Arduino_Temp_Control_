@@ -2,7 +2,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.metrics import accuracy_score
 import pandas as pd
-
+import joblib  # library for saving and storing models
 
 # Reading a labeled dataset
 df = pd.read_csv('labeled_data.csv')
@@ -23,3 +23,6 @@ y_pred = model.predict(X_test)
 
 # Model accuracy
 print("Accuracy:", accuracy_score(y_test, y_pred))
+
+
+joblib.dump(model, "prediction_model.pkl")  # Save the model to a .pkl file
