@@ -67,7 +67,8 @@ We want to connect Python to Arduino via USB port and display and save data comi
 - Display online in console
 
 ### **🧱 Step 1: Arduino code (simplified) for measuring temperature and humidity using a sensor SHT20**
-The code for this step is located in the path:  *→ Sending_Arduino_Temp_Humid_to_Serial → src → main.cpp* .
+The code for this step is located in the path:  
+*→ Sending_Arduino_Temp_Humid_to_Serial → src → main.cpp* .
 
 ### **🐍 Step 2: Python code to receive and store data sent from Arduino**
 #### **📦 First install the library:**
@@ -164,3 +165,5 @@ This code is placed in the file:
 - If the temperature or humidity increases, the model decides to turn on the fan (or LED)
 - If the conditions are right, it sends a command to turn off
 
+### **Note:** ###
+ All code is written in Microsoft Visual Studio Code and the Platform IO Extension is used to communicate with Arduino.
