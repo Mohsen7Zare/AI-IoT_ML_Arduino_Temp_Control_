@@ -92,7 +92,8 @@ Timestamp, Temperature, Humidity
 - pandas to read CSV file
 - matplotlib to plot graphs
 ### **🐍 Python code for plotting the graph**
-The code for this section is in a *file called plot_sensor_data.py*
+The code for this section is in a file called :  
+*plot_sensor_data.py*
 ### **📦 Install matplotlib:**
 Type this code in the terminal:  
 pip install matplotlib
@@ -100,6 +101,9 @@ pip install matplotlib
 ### **🔍 Result:**
 - A beautiful and accurate graph of the temperature and humidity change trend
 - Check what patterns are in the data (to prepare the machine learning model)
+
+![alt text](Plot_Sensor_Data.png)
+
 
 ## **🧠 Project Pase 3: Build a machine learning (ML) model for prediction or intelligent decision-making**
 I built a model that decides whether to turn on the fan (or a similar control output) based on temperature and humidity data.
